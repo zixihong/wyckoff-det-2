@@ -20,8 +20,8 @@ def addFiller(original_list, output_file):
     # Add the last point from the original list
     modified_data.append(original_list[-1])
 
-    if (len(modified_data) < 50):
-        for i in range(50-len(modified_data)):
+    if (len(modified_data) < 60):
+        for i in range(60-len(modified_data)):
             modified_data.append(np.nan)
 
     # Save modified data to a CSV file
@@ -29,7 +29,7 @@ def addFiller(original_list, output_file):
         csv_writer = csv.writer(csvfile)
         csv_writer.writerow(modified_data)
 
-for j in range(100):
+for j in range(100000):
     pattern = []
     validity = True
     pattern.append(validity)
@@ -54,11 +54,11 @@ for j in range(100):
 
     addFiller(pattern, "pattern_data.csv")
 
-for i in range(100):
+for i in range(100000):
     pattern = []
     validity = False
     pattern.append(validity)
-    for k in range(random.randint(7, 9)):
+    for k in range(random.randint(9)):
         pattern.append(random.uniform(0, 2))
 
     addFiller(pattern, "pattern_data.csv")
