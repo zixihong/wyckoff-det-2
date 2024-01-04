@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 
 # Load your data here (replace 'pattern_data.csv' with the actual file path)
 # Assuming your data has no headers, if it does, set header=None in read_csv
-data = pd.read_csv('pattern_data.csv', header=None)
+data = pd.read_csv('pattern_data_padded_shuffled.csv', header=None)
 
 # Separate features (X) and target variable (y)
 X = data.iloc[:, 1:].values  # Features (excluding the first column)
