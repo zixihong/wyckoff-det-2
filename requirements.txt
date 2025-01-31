@@ -1,0 +1,6 @@
+pandas
+numpy
+dask
+tensorflow
+scikit-learn
+python-dotenv

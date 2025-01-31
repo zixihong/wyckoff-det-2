@@ -1,5 +1,4 @@
 import pandas as pd
-import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense, Dropout
 from sklearn.model_selection import train_test_split
@@ -23,7 +22,7 @@ model.add(Dense(32, activation='relu'))
 model.add(Dense(1, activation='sigmoid'))  # Assuming binary classification
 
 # Compile the model
-model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.compile(optimizer='Adam', loss='binary_crossentropy', metrics=['accuracy'])
 
 # Train the model
 model.fit(X_train, y_train, epochs=10, batch_size=32, validation_data=(X_test, y_test))
